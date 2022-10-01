@@ -5,11 +5,13 @@
 <% end %>
  <table class="table table-hover table-inverse">
    <% if @range == "User" %>
-   <tbody>
+   <thead>
     <tr>
        <th></th>
        <th>name</th>
      </tr>
+    </thead>
+    <tbody>
      <% @users.each do |user| %>
      <tr>
        <td><%= image_tag user.get_profile_image, size: '50x50' %></td>
