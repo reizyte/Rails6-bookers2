@@ -4,10 +4,13 @@
       <h2>User info</h2>
       <%= render 'users/info',user: @user %>
       <h2 class="mt-3">New book</h2>
-      <%= render 'form', book: @boonk_new %>
+      <%= render 'form', book: @book_new %>
     </div>
     <div class='col-md-8 offset-md-1'>
   		<h2>Book detail</h2>
+
+
+
   		<table class='table'>
   		 <tr>
           <td><%= link_to(@book.user) do %>
@@ -25,13 +28,18 @@
           <td id="favorite_bottons_<%= @book.id %>">
           <%= render 'favorites/btn', book: @book %>
           </td>
+            <td id="comments_count">
+            <%= render 'book_comments/count', book: @book %>
+            </td>
+        </tr>
 
-            <td>コメント数:<%= @book.book_comments.count %></td>
-           </tr>
-           <%= render 'book_comments/index', book: @book %>
           </table>
-
+          <div id="comments_index">
+          <%= render 'book_comments/index', book: @book %>
+          </div>
+          <div id="comments_area">
          <%= render 'book_comments/form', book: @book, book_comment: @book_comment %>
+         </div>
     </div>
   </div>
 </div>
