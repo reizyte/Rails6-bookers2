@@ -28,18 +28,20 @@
           <td id="favorite_bottons_<%= @book.id %>">
           <%= render 'favorites/btn', book: @book %>
           </td>
-            <td id="comments_count">
-            <%= render 'book_comments/count', book: @book %>
-            </td>
+          <td id="comments_count">
+          <%= render 'book_comments/count', book: @book %>
+          </td>
         </tr>
-
-          </table>
+      </table>
+      
           <div id="comments_index">
           <%= render 'book_comments/index', book: @book %>
           </div>
+      
           <div id="comments_area">
          <%= render 'book_comments/form', book: @book, book_comment: @book_comment %>
          </div>
+      
     </div>
   </div>
 </div>
