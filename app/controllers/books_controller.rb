@@ -5,6 +5,7 @@ class BooksController < ApplicationController
     @book_new = Book.new
     @user = @book.user
     @book_comment = BookComment.new
+    @review = Review.new
 
   end
 
@@ -13,6 +14,7 @@ class BooksController < ApplicationController
     @book = Book.new
     @user = current_user
     @users = User.all
+    @review = Review.new
   end
 
   def create
